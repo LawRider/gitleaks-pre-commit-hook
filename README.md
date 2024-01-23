@@ -32,28 +32,28 @@ If the specified pre-commit hook is enabled, the script will download pre-commit
 ### 4. Cleanup (if installed via "curl ... | sh")
 If you've installed the script via "curl ... | sh" and want to remove the script after installation, the script will clean up itself. You don't need to manually remove it.
 
-### Notes
+## Notes
 Make sure you have internet access during the installation process.
 The script is designed to be self-contained and cleans up after installation.
 
-### Examples
-# Install the script using "curl ... | sh"
+## Examples
+### Install the script using "curl ... | sh"
 ```bash
 curl -fsSL https://raw.githubusercontent.com/LawRider/gitleaks-pre-commit-hook/hook.sh | sh
 ```
 
-# Enable the specified pre-commit hook
+### Enable the specified pre-commit hook
 ```bash
 git config --global hooks.check-yaml.enable true
 ```
 
-# Execute the script (it will install Python, pre-commit, and configure the specified hook)
-# The script will also clean up temporary files after installation
+### Execute the script (it will install Python, pre-commit, and configure the specified hook)
+### The script will also clean up temporary files after installation
 ```bash
 ./hook.sh
 ```
 
-# Disable the specified pre-commit hook
+### Disable the specified pre-commit hook
 ```bash
 git config --global hooks.check-yaml.enable false
 ```
